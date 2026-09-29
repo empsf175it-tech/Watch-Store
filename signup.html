@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a NovaPulse Account">
+  <title>Sign Up | NovaPulse</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page signup-page">
+  <div class="auth-tools">
+    <button class="nav-btn theme-btn" type="button" aria-label="Toggle theme" title="Toggle theme" onclick="toggleTheme()">◐</button>
+  </div>
+
+  <div class="auth-box">
+    <div class="auth-card">
+      <a class="logo auth-logo" href="index.html">
+        <span class="logo-icon"></span>
+        <span>NovaPulse</span>
+      </a>
+
+      <h1>Create your account.</h1>
+      <p>Join NovaPulse and keep your devices, orders and support in one place.</p>
+
+      <div class="social-login">
+        <button type="button" class="social-provider" onclick="socialLogin('Google')">Google</button>
+        <button type="button" class="social-provider" onclick="socialLogin('Apple')">Apple</button>
+      </div>
+
+      <div class="or">or create with email</div>
+
+      <form onsubmit="signupSubmit(event)">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="signupName">Full name</label>
+            <input id="signupName" required placeholder="Your full name">
+          </div>
+          <div class="field">
+            <label for="signupEmail">Email</label>
+            <input id="signupEmail" required type="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="signupPhone">Phone</label>
+            <input id="signupPhone" placeholder="+91">
+          </div>
+          <div class="field">
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" required type="password" minlength="6" placeholder="Minimum 6 characters">
+          </div>
+          <div class="field">
+            <label for="signupConfirm">Confirm password</label>
+            <input id="signupConfirm" required type="password" minlength="6" placeholder="Re-enter password">
+          </div>
+        </div>
+
+        <label class="signup-terms">
+          <input required type="checkbox">
+          <span>I agree to the NovaPulse account terms and privacy policy.</span>
+        </label>
+
+        <button class="btn lime auth-submit" type="submit">Create account ↗</button>
+      </form>
+
+      <p class="auth-note auth-switch">Already have an account? <a href="login.html">Login</a></p>
+      <p class="auth-brand-note">Secure demo account creation · No real payment required</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

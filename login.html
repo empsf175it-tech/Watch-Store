@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your NovaPulse Account">
+  <title>Login | NovaPulse</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-tools">
+    <button class="nav-btn theme-btn" type="button" aria-label="Toggle theme" title="Toggle theme" onclick="toggleTheme()">◐</button>
+  </div>
+
+  <div class="auth-box">
+    <div class="auth-card">
+      <a class="logo auth-logo" href="index.html">
+        <span class="logo-icon"></span>
+        <span>NovaPulse</span>
+      </a>
+
+      <h1>Welcome back.</h1>
+      <p>Sign in to manage your NovaPulse account.</p>
+
+      <div class="social-login">
+        <button type="button" class="social-provider" onclick="socialLogin('Google')">Google</button>
+        <button type="button" class="social-provider" onclick="socialLogin('Apple')">Apple</button>
+      </div>
+
+      <div class="or">or continue with email</div>
+
+      <form onsubmit="loginSubmit(event)">
+        <div class="field">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" required placeholder="you@example.com">
+        </div>
+        <div class="field" style="margin-top:13px">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required placeholder="••••••••">
+        </div>
+        <div class="remember">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#" onclick="toast('Password reset link sent to demo email');return false;">Forgot Password?</a>
+        </div>
+        <button class="btn lime auth-submit" type="submit">Login ↗</button>
+      </form>
+
+      <p class="auth-note auth-switch">New here? <a href="signup.html">Create an account</a></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

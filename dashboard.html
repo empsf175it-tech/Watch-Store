@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaPulse Member Dashboard">
+  <title>Dashboard | NovaPulse</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dashboard-page">
+  <main class="dashboard-shell">
+    <div class="dashboard-clean">
+      <!-- HEADER -->
+      <div class="dashboard-simple-head">
+        <a href="index.html" class="logo dashboard-logo">
+          <span class="logo-icon"></span>
+          <span>NovaPulse Dashboard</span>
+        </a>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <button class="nav-btn theme-btn" type="button" aria-label="Toggle theme" title="Toggle theme" onclick="toggleTheme()">◐</button>
+          <a href="login.html" class="btn dashboard-logout">Logout</a>
+        </div>
+      </div>
+
+      <!-- WELCOME -->
+      <section class="dashboard-welcome">
+        <div>
+          <span class="eyebrow"><i></i> Personal dashboard</span>
+          <h1>Good evening, Aravind.</h1>
+          <p>Everything important about your NovaPulse devices, orders, wellness and account — in one place.</p>
+        </div>
+        <div class="dashboard-welcome-actions">
+          <a href="products.html" class="btn lime">Shop devices ↗</a>
+          <a href="contact.html" class="btn outline">Get support</a>
+        </div>
+      </section>
+
+      <!-- METRICS -->
+      <section class="dash-grid dashboard-metrics">
+        <article class="dash-card">
+          <div class="metric-row"><small>Connected devices</small><span class="metric-up">All synced</span></div>
+          <strong>3</strong>
+          <p class="dash-muted">2 watches · 1 earbuds</p>
+        </article>
+        <article class="dash-card">
+          <div class="metric-row"><small>Total orders</small><span class="metric-up">+2 this month</span></div>
+          <strong>8</strong>
+          <p class="dash-muted">7 delivered · 1 in transit</p>
+        </article>
+        <article class="dash-card">
+          <div class="metric-row"><small>Reward points</small><span class="metric-up">+120 this week</span></div>
+          <strong>1,240</strong>
+          <p class="dash-muted">₹620 available value</p>
+        </article>
+        <article class="dash-card">
+          <div class="metric-row"><small>Support</small><span class="metric-up">Online</span></div>
+          <strong>24/7</strong>
+          <p class="dash-muted">Priority support active</p>
+        </article>
+      </section>
+
+      <!-- MAIN ROW 1 -->
+      <section class="dashboard-main-grid">
+        <article class="dash-panel dash-panel-large">
+          <div class="dash-panel-head">
+            <div>
+              <small>Wellness snapshot</small>
+              <h2>Your weekly rhythm</h2>
+            </div>
+            <span class="status status-good">On track</span>
+          </div>
+          <div class="wellness-grid">
+            <div class="wellness-stat">
+              <span class="wellness-icon">↗</span>
+              <strong>8,420</strong>
+              <small>Average steps</small>
+            </div>
+            <div class="wellness-stat">
+              <span class="wellness-icon">◒</span>
+              <strong>7h 42m</strong>
+              <small>Average sleep</small>
+            </div>
+            <div class="wellness-stat">
+              <span class="wellness-icon">♡</span>
+              <strong>82%</strong>
+              <small>Recovery</small>
+            </div>
+          </div>
+          <div class="dashboard-progress"><span style="width:82%"></span></div>
+          <div class="progress-labels"><span>Weekly goal</span><strong>82%</strong></div>
+        </article>
+
+        <article class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <small>Battery overview</small>
+              <h2>Devices</h2>
+            </div>
+            <button class="text-btn" type="button" onclick="toast('All devices are synced')">Sync all</button>
+          </div>
+          <div class="battery-list">
+            <div class="battery-row">
+              <div><strong>Orbit Pro</strong><small>Smartwatch</small></div>
+              <div class="battery-value"><span>87%</span><i><b style="width:87%"></b></i></div>
+            </div>
+            <div class="battery-row">
+              <div><strong>Aero Buds</strong><small>Earbuds case</small></div>
+              <div class="battery-value"><span>64%</span><i><b style="width:64%"></b></i></div>
+            </div>
+            <div class="battery-row">
+              <div><strong>Pulse Core</strong><small>Smartwatch</small></div>
+              <div class="battery-value"><span>52%</span><i><b style="width:52%"></b></i></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- MAIN ROW 2 -->
+      <section class="dashboard-main-grid">
+        <article class="dash-panel dash-panel-large">
+          <div class="dash-panel-head">
+            <div>
+              <small>Recent purchases</small>
+              <h2>Order activity</h2>
+            </div>
+            <a href="products.html" class="text-btn">Shop again ↗</a>
+          </div>
+          <div class="order-list">
+            <div class="order-row">
+              <div class="order-badge">01</div>
+              <div class="order-info">
+                <strong>#NP-2408 · Orbit Pro</strong>
+                <small>18 Sep 2026 · ₹18,999</small>
+              </div>
+              <span class="status">Delivered</span>
+            </div>
+            <div class="order-row">
+              <div class="order-badge">02</div>
+              <div class="order-info">
+                <strong>#NP-2387 · Aero Buds</strong>
+                <small>05 Sep 2026 · ₹7,999</small>
+              </div>
+              <span class="status">Delivered</span>
+            </div>
+            <div class="order-row">
+              <div class="order-badge">03</div>
+              <div class="order-info">
+                <strong>#NP-2419 · Watch Band</strong>
+                <small>22 Sep 2026 · ₹1,499</small>
+              </div>
+              <span class="status status-progress">In transit</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <small>Delivery</small>
+              <h2>Current order</h2>
+            </div>
+            <span class="status status-progress">In transit</span>
+          </div>
+          <h3 class="delivery-title">Aero Buds replacement tips</h3>
+          <p class="dash-muted">Expected delivery · 27 Sep 2026</p>
+          <div class="dashboard-progress"><span style="width:68%"></span></div>
+          <div class="progress-labels"><span>Shipped from warehouse</span><strong>68%</strong></div>
+          <div class="delivery-steps">
+            <span class="done">Ordered</span>
+            <span class="done">Packed</span>
+            <span class="active">Shipped</span>
+            <span>Delivered</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONNECTED DEVICES -->
+      <section class="dashboard-device-section">
+        <div class="dash-section-heading">
+          <div>
+            <span class="eyebrow">Your setup</span>
+            <h2>Connected devices</h2>
+          </div>
+          <a href="products.html" class="btn outline">Add another device</a>
+        </div>
+        <div class="device-dashboard-grid">
+          <article class="dashboard-device-card">
+            <div class="dashboard-device-art">
+              <img src="image/orbit-pro.jpg" alt="Orbit Pro Smartwatch" class="dashboard-device-img">
+            </div>
+            <div class="dashboard-device-info">
+              <div><span class="status status-good">Connected</span><small>87% battery</small></div>
+              <h3>Orbit Pro</h3>
+              <p>Last sync 2 minutes ago · GPS ready · Notifications on</p>
+              <button class="btn outline" type="button" onclick="toast('Orbit Pro settings opened')">Manage device</button>
+            </div>
+          </article>
+          <article class="dashboard-device-card">
+            <div class="dashboard-device-art">
+              <img src="image/aero-buds.jpg" alt="Aero Buds True Wireless" class="dashboard-device-img">
+            </div>
+            <div class="dashboard-device-info">
+              <div><span class="status status-good">Connected</span><small>64% case</small></div>
+              <h3>Aero Buds</h3>
+              <p>ANC active · Low-latency mode · Last sync 8 minutes ago</p>
+              <button class="btn outline" type="button" onclick="toast('Aero Buds controls opened')">Manage device</button>
+            </div>
+          </article>
+          <article class="dashboard-device-card">
+            <div class="dashboard-device-art">
+              <img src="image/watch-pulse-core-crop.jpg" alt="Pulse Core Smartwatch" class="dashboard-device-img">
+            </div>
+            <div class="dashboard-device-info">
+              <div><span class="status status-good">Connected</span><small>52% battery</small></div>
+              <h3>Pulse Core</h3>
+              <p>Activity tracking on · Sleep tracking on · Last sync 12 minutes ago</p>
+              <button class="btn outline" type="button" onclick="toast('Pulse Core settings opened')">Manage device</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ACTIVITY & PROFILE -->
+      <section class="dashboard-main-grid">
+        <article class="dash-panel">
+          <div class="dash-panel-head">
+            <div>
+              <small>Latest updates</small>
+              <h2>Recent activity</h2>
+            </div>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-dot"></span><div><strong>Orbit Pro synced</strong><div class="dash-muted">2 minutes ago</div></div></div>
+            <div class="activity-item"><span class="activity-dot"></span><div><strong>Order #NP-2408 delivered</strong><div class="dash-muted">Yesterday</div></div></div>
+            <div class="activity-item"><span class="activity-dot"></span><div><strong>Reward balance updated</strong><div class="dash-muted">3 days ago</div></div></div>
+            <div class="activity-item"><span class="activity-dot"></span><div><strong>Weekly wellness report ready</strong><div class="dash-muted">4 days ago</div></div></div>
+          </div>
+        </article>
+
+        <article class="dash-panel" id="dashProfile">
+          <div class="dash-panel-head">
+            <div>
+              <small>Account</small>
+              <h2>Your profile</h2>
+            </div>
+            <button class="text-btn" type="button" onclick="toast('Profile saved successfully')">Save</button>
+          </div>
+          <div class="profile-mini">
+            <div class="profile-avatar">A</div>
+            <div>
+              <strong>Aravind</strong>
+              <p>NovaPulse member · Hyderabad</p>
+            </div>
+          </div>
+          <div class="profile-fields">
+            <div><span>Email</span><strong>hello@example.com</strong></div>
+            <div><span>Preferred device</span><strong>Orbit Pro</strong></div>
+            <div><span>Notifications</span><strong>All updates</strong></div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
